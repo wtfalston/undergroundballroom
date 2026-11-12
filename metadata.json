@@ -1,0 +1,6 @@
+{
+  "name": "The Underground Ballroom",
+  "description": "A faithful recreation and customizer for The Underground Ballroom cult alt-indie website, featuring vintage gothic aesthetic, tracklist lyrics, archival tales, secret artwork room, and ambient sound.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

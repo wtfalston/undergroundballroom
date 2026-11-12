@@ -1,0 +1,143 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'Maged W20';
+  src: url('/Maged W20.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --bg: #000000;
+  --wine: #8B2635;
+  --wine-bright: #A93341;
+  --yellow: #FFFF00;
+  --cream: #F5E6C8;
+  --amber: #F5A623;
+  --link: #C8A2C8;
+  --frame: #2A2A2A;
+  --frame-light: #4A4A4A;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #F5A623;
+  font-family: 'Maged W20', 'Times New Roman', Georgia, serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+  text-rendering: optimizeSpeed;
+}
+
+/* Authentic CRT vignette */
+.crt-vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 90;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 55%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+/* Optional CRT scanlines */
+.crt-scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 91;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.12) 0px,
+    rgba(0, 0, 0, 0.12) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: multiply;
+}
+
+/* Signature 3D beveled frame */
+.ub-frame {
+  background: #2a2a2a;
+  border-top: 6px solid #6a6a6a;
+  border-left: 6px solid #6a6a6a;
+  border-right: 6px solid #1a1a1a;
+  border-bottom: 6px solid #1a1a1a;
+}
+
+/* Beveled button / control */
+.ub-btn-beveled {
+  background: #2a2a2a;
+  border-top: 3px solid #6a6a6a;
+  border-left: 3px solid #6a6a6a;
+  border-right: 3px solid #1a1a1a;
+  border-bottom: 3px solid #1a1a1a;
+  color: #F5A623;
+  font-family: inherit;
+  transition: all 0.1s ease;
+}
+
+.ub-btn-beveled:hover {
+  background: #353535;
+  color: #FFFF00;
+}
+
+.ub-btn-beveled:active {
+  border-top: 3px solid #1a1a1a;
+  border-left: 3px solid #1a1a1a;
+  border-right: 3px solid #6a6a6a;
+  border-bottom: 3px solid #6a6a6a;
+}
+
+/* Inset beveled input */
+.ub-input-inset {
+  background: #000000;
+  color: #FFFF00;
+  border-top: 2px solid #1a1a1a;
+  border-left: 2px solid #1a1a1a;
+  border-right: 2px solid #6a6a6a;
+  border-bottom: 2px solid #6a6a6a;
+  font-family: inherit;
+  outline: none;
+}
+
+.ub-input-inset:focus {
+  border-color: #8B2635;
+}
+
+/* Dividing rule */
+.ub-rule {
+  border: none;
+  border-top: 2px solid #555555;
+  margin: 16px auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+/* Pixelated crisp image rendering */
+.crisp-img {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Smooth custom scrollbar for drawer/editor */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border: 1px solid #555555;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
