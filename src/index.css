@@ -2,7 +2,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
-  font-family: 'Maged W20';
+  font-family: 'Times New Roman';
   src: url('/Maged W20.ttf') format('truetype');
   font-display: swap;
 }
